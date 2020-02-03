@@ -11,7 +11,7 @@ import { AppProvider } from './context/AppProvider'
 import '../src/styles/base.css'
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
+  uri: '/api/graphql',
 
   // Authorization is out of scope for this example,
   // but this is where you could add your auth logic
