@@ -56,9 +56,10 @@ const server = new ApolloServer({
         port: 5432,
         username: process.env.DB_USER,
         password: process.env.DB_PASS,
-        synchronize: true,
+        synchronize: false,
         entities: Entities
       })
+      console.log({Entities})
     }
 
       
