@@ -21,8 +21,6 @@ const Activity: React.FC<Activity> = () => {
 
   return (
     <Page title={'Activity'}>
-      <a href={"https://slack.com/oauth/authorize?scope=commands,chat:write:bot,users.profile:read&client_id=649451385750.920859329507"}>
-        <img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcSet="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x" /></a>
       {data?.identity?.messagesAll?.map((msg: any) => (
         <ActivityItem
           viewerDid={appState.defaultDid}

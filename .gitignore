@@ -25,3 +25,4 @@ yarn-error.log*
 .env.local
 .env
 identity-store.json
+.now
