@@ -51,7 +51,11 @@ const server = new ApolloServer({
     } catch (e) {
       await createConnection({
         type: 'postgres',
-        url: process.env.DB_URL,
+        database: process.env.DB,
+        host: process.env.DB_HOST,
+        port: 5432,
+        username: process.env.DB_USER,
+        password: process.env.DB_PASS,
         synchronize: true,
         entities: Entities
       })

@@ -5,7 +5,11 @@
       "SLACK_CLIENT_SECRET": "@slack-client-secret",
       "SLACK_SIGNING_SECRET": "@slack-signing-secret",
       "REDIRECT_URI": "@redirect-uri",
-      "DB_URL": "@db-url"
+      "DB": "@db",
+      "DB_HOST": "@db-host",
+      "DB_PORT": "@db-port",
+      "DB_USER": "@db-user",
+      "DB_PASS": "@db-pass"
     }
   }
 }
