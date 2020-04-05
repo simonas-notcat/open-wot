@@ -1,7 +1,8 @@
+import { NowRequest, NowResponse } from '@now/node'
 const { text } = require('micro')
 const { parse } = require('querystring')
 
-module.exports = async (req, res) => {
+module.exports = async (req: NowRequest, res: NowResponse) => {
   // Parse code received through req
   const body = parse(await text(req))
 
