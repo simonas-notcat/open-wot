@@ -47,21 +47,20 @@ const server = new ApolloServer({
   ),
   context: async () => {
     try {
-      getConnection()
+      const connection = getConnection()
+      await connection.close()
     } catch (e) {
-      await createConnection({
-        type: 'postgres',
-        database: process.env.DB,
-        host: process.env.DB_HOST,
-        port: 5432,
-        username: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        synchronize: false,
-        entities: Entities
-      })
-      console.log({Entities})
     }
-
+    await createConnection({
+      type: 'postgres',
+      database: process.env.DB,
+      host: process.env.DB_HOST,
+      port: 5432,
+      username: process.env.DB_USER,
+      password: process.env.DB_PASS,
+      synchronize: false,
+      entities: Entities
+    })
       
     return { agent }
   },
